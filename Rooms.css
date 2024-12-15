@@ -1,0 +1,336 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(8, 8, 8, 0.5);
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.SiteName{
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    padding-left: 10px;
+}
+
+nav{
+    margin-left: auto;
+    list-style: none;
+}
+
+nav ul{
+    float: right;
+    margin-right: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 5px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 20px 32px;
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #FFC700;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.firstrooms{
+    background-image: linear-gradient(rgba(22, 22, 22, 0.5), rgba(27, 27, 27, 0.5)),  url(images/RoomsDining.png);
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+}
+
+.roomsdining{
+    font-family: "Allison", cursive;
+    font-size: 150px;
+    color: #FFC700;
+    font-weight: 500;
+    font-style: normal;
+    padding-top: 28vh;
+    margin-left: 30vw;
+    text-shadow: 3px 4px 3px black;
+}
+
+.section-title {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rooms-section {
+    height: auto;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.rooms-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rooms-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 300px;
+}
+
+.room {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    background-color: #dfdfdf;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.room img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.room-details {
+    flex: 1;
+}
+
+.room-details h3 {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.room-details p {
+    font-family: "Montserrat", sans-serif;
+    margin: 5px 0 0;
+    font-size: 15px;
+    color: #666;
+}
+
+.room-details .max-capacity {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+
+.dining-section {
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+    max-width: 90vw;
+}
+
+.dining-section .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.dining-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dining-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #333;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dining-buttons button:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.dining-display {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dining-display img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bottompage {
+    position: relative;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(200, 191, 175), rgb(0, 0, 0));
+    padding: 20px 0;
+}
+
+.beigeeffect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; 
+    z-index: 2;
+}
+
+.wave {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+    z-index: 1; 
+}
+
+.footer-content {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    z-index: 1;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.footer-links {
+    margin-bottom: 25px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FFD700; 
+}
+
+.copyright {
+    font-size: 12px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+    }
+
+    .roomsdining {
+        font-size: 80px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .rooms-container {
+        flex-direction: column;
+    }
+
+    .room {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .room img {
+        width: 100%;
+        height: auto;
+    }
+
+    .dining-buttons button {
+        padding: 8px 12px;
+    }
+
+    .footer-links a {
+        margin: 0 8px;
+    }
+}
